@@ -1,10 +1,12 @@
-package bean;
+package by.shumilov.bean;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @AllArgsConstructor
-public class Request {
+@NoArgsConstructor
+public class Response {
     private int value;
 }
