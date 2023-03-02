@@ -24,8 +24,7 @@ public class Client {
     private final AtomicInteger counter = new AtomicInteger(0);
     private final Random random = new Random();
 
-    public Client() {
-        int numberOfRequests = 50;
+    public Client(int numberOfRequests) {
         this.requestList = Stream.generate(() ->
                         new Request(random.nextInt(100)))
                 .limit(numberOfRequests)

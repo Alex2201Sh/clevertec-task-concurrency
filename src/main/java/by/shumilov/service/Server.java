@@ -30,7 +30,7 @@ public class Server implements Callable<List<Response>> {
         Request request = getRequestFromClient(client);
         while (request != null) {
             try {
-                TimeUnit.MILLISECONDS.sleep(random.nextInt(200));
+                TimeUnit.MILLISECONDS.sleep(random.nextInt(2000));
                 lock.lock();
                 Response response = new Response();
                 response.setValue(100 - request.getValue());
